@@ -86,7 +86,7 @@ config.action_mailer.default_url_options = { host: 'https://jespinteresting.hero
   # Do not dump schema after migrations.
   #Note to set this to your actual host 
   config.active_record.dump_schema_after_migration = false
-end
+
 
 config.paperclip_defaults = {
   :storage => :s3,
@@ -96,3 +96,4 @@ config.paperclip_defaults = {
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
+end
