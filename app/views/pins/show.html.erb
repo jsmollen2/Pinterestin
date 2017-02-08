@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<%= link_to image_tag(@pin.image.url, class: 'media-object'), @pin.image.url, target: '_blank' %>
   <strong>Description:</strong>
   <%= @pin.description %>
 </p>
