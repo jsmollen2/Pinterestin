@@ -81,9 +81,18 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 #Required for Heroku
-config.action_mailer.default_url_options = { host: 'https://jackspinteresting.herokuapp.com/'}
+config.action_mailer.default_url_options = { host: 'https://jespinteresting.herokuapp.com//'}
 
   # Do not dump schema after migrations.
   #Note to set this to your actual host 
   config.active_record.dump_schema_after_migration = false
 end
+
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
