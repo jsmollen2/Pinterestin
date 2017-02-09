@@ -81,7 +81,7 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 #Required for Heroku
-config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+config.action_mailer.default_url_options = { host: 'jespinteresting.herokuapp.com'}
 
   # Do not dump schema after migrations.
   #Note to set this to your actual host 
